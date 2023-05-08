@@ -28,14 +28,12 @@ import org.jdatepicker.JDatePicker;
 import org.jdatepicker.impl.JDatePanelImpl;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFormattedTextField;
@@ -48,7 +46,6 @@ import javax.swing.border.LineBorder;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 import org.jdatepicker.impl.UtilCalendarModel;
 
@@ -605,7 +602,7 @@ public class ManagementView {
             public String valueToString(Object value) throws ParseException {
                 if (value instanceof Date) {
                     DateFormat dayFormat = new SimpleDateFormat("dd");
-                    DateFormat monthFormat = new SimpleDateFormat("mm");
+                    DateFormat monthFormat = new SimpleDateFormat("MM");
                     DateFormat yearFormat = new SimpleDateFormat("yyyy");
                     Date date = (Date) value;
                     String day = dayFormat.format(date);
